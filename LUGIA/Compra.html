@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      border-radius: 15px;
+      margin: 20px;
+    }
+
+    .container {
+      border-radius: 15px;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+
+    img {
+      border-radius: 15px;
+    }
+
+    .contact-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-option {
+      cursor: pointer;
+      padding: 10px;
+      border-bottom: 2px solid transparent;
+    }
+
+    .contact-option.active {
+      border-bottom: 2px solid #007bff;
+    }
+
+    .form-group {
+      display: none;
+    }
+
+    .form-group.active {
+      display: block;
+    }
+
+    a.contact-link {
+      text-decoration: none;
+      color: inherit;
+    }
+  </style>
+  <title>Formulário de Compra</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <a href="../LUGIA.html" class="btn btn-primary">&larr; Voltar</a>
+
+    <br><br>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-options">
+          <h2 class="contact-option active">Entre em Contato</h2>
+          <h2><a class="contact-link" href="ContatoPorTelefone.html">Contato por telefone</a></h2>
+        </div>
+
+        <form action="../ConfirmForm.html">
+          <div>
+            <label for="salutation">Tratamento</label>
+            <select class="form-control" id="salutation" required>
+              <option value="Sr">Sr</option>
+              <option value="Sra">Sra</option>
+            </select>
+          </div>
+          <div>
+            <label for="firstName">Nome</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Nome" required>
+          </div>
+          <div>
+            <label for="lastName">Sobrenome</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Sobrenome" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
+          </div>
+          <div>
+            <label for="phone">Telefone Celular</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Telefone Celular" required>
+          </div>
+
+          <!-- Adicionando o botão de confirmação -->
+          <div style="display: flex; align-items: center;">
+            <input type="checkbox" id="autorizacaoPrivacidade" name="autorizacaoPrivacidade"
+              style="width: 40px; height: 40px; margin-right: 20px;" required>
+            <label for="autorizacaoPrivacidade" style="font-size: 16px;">AUTORIZO a UNOVA Brasil a tratar meus dados
+              pessoais para os fins propostos.</label>
+          </div>
+
+          <br>
+
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </form>
+      </div>
+
+      <!-- Foto do Carro e Informações -->
+      <div class="col-md-6">
+        <img src="../assets/images/Lugia2.jpg" alt="Carro" class="img-fluid">
+        <h3>UNOVA LUGIA</h3>
+        <p>Valor: R$ 5.650.000</p>
+        <p>Descubra a expressão máxima de luxo e desempenho automotivo com o Unova Lugia, a joia da coroa em nossa linha
+          de carros de alto padrão. Este ícone de engenharia redefine os limites da excelência, proporcionando uma
+          experiência de condução inigualável. </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

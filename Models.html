@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unova</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #video-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        #video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            width: 60px;
+        }
+
+        .content-container {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .models-container {
+            background-color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .model-cards-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .model-card {
+            max-width: 300px;
+            margin: 0 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            pointer-events: fill;
+            height: 500px;
+        }
+
+        .model-card img {
+            max-width: 100%;
+            height: 40%;
+            cursor: pointer;
+        }
+
+        .model-card .card-body {
+            padding: 20px;
+            height: 60%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="Home.html"><img src="assets/images/UnovaLogo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="Models.html">Models</a>
+                </li>
+                <li class="nav-item">
+                    <a id="contact-link" class="nav-link" href="#" data-toggle="popover" title="Follow us"
+                        data-content='<a href="https://twitter.com/" target="_blank">Twitter</a><br><a href="https://www.instagram.com/unovamotors/" target="_blank">Instagram</a><br><a href="https://www.facebook.com/" target="_blank">Facebook</a>'>Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SobreNos.html">About Us</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Models Section -->
+    <div class="models-container">
+        <h2>Models</h2>
+
+        <!-- Container para os cards de modelo -->
+        <div class="model-cards-container">
+
+            <div class="model-card" onclick="openModelPage('LAPRASGT.html')">
+                <img src="assets/images/UnovaPuroSangue.jpg" class="card-img-top" alt="Model 1">
+                <div class="card-body">
+                    <h5 class="card-title">LAPRAS GT</h5>
+                    <p class="card-text"> O carro que vai transformar a sua experiência de dirigir. O Modelo LAPRAS GT
+                        oferece o melhor em design, tecnologia e segurança. Ele tem um motor turbo de alta performance,
+                        que entrega uma aceleração impressionante e uma economia de combustível surpreendente.</p>
+                </div>
+            </div>
+
+            <div class="model-card" onclick="openModelPage('LUGIA.html')">
+                <img src="assets/images/Carro2.png" class="card-img-top" alt="Model 2">
+                <div class="card-body">
+                    <h5 class="card-title">LUGIA</h5>
+                    <p class="card-text">Descubra a expressão máxima de luxo e desempenho automotivo com o Unova Lugia,
+                        a joia da coroa em nossa linha de carros de alto padrão. Este ícone de engenharia redefine os
+                        limites da excelência, proporcionando uma experiência de condução inigualável.</p>
+                </div>
+            </div>
+
+            <div class="model-card" onclick="openModelPage('SemEstoque.html')">
+                <img src="assets/images/1.jpg" class="card-img-top" alt="Model 2">
+                <div class="card-body">
+                    <h5 class="card-title">ZENDRTNO</h5>
+                    <p class="card-text">Prepare-se para embarcar em uma jornada transcendental com o ZENDRTNO. Este não
+                        é apenas um meio de transporte; é uma declaração de inovação, elegância e progresso. Está na
+                        hora de experimentar o futuro da condução com ZENDRTNO.
+                    </p>
+                </div>
+            </div>
+
+            <div class="model-card" onclick="openModelPage('SemEstoque.html')">
+                <img src="assets/images/4.jpg" class="card-img-top" alt="Model 2">
+                <div class="card-body">
+                    <h5 class="card-title">AQUILES</h5>
+                    <p class="card-text">Desafie os limites e conquiste as estradas com o Unova Aquiles. Este não é
+                        apenas um carro; é uma expressão de coragem, potência e elegância. Entre na jornada heroica da
+                        condução com o Unova Aquiles e descubra o significado de uma experiência de condução lendária.
+                    </p>
+                </div>
+            </div>
+
+            <div class="model-card" onclick="openModelPage('SemEstoque.html')">
+                <img src="assets/images/Greninja.jpg" class="card-img-top" alt="Model 2">
+                <div class="card-body">
+                    <h5 class="card-title">GRENINJA</h5>
+                    <p class="card-text">Deslize pela cidade com graça e potência inigualáveis. O Unova Greninja não é
+                        apenas um carro; é uma obra-prima de design e engenharia que celebra a união perfeita entre
+                        agilidade e elegância. Entre no mundo do Unova Greninja e deixe sua condução se tornar uma
+                        expressão de arte nas estradas ao encontrar seu eu interior.
+                    </p>
+                </div>
+            </div>
+
+            <div class="model-card" onclick="openModelPage('SemEstoque.html')">
+                <img src="assets/images/6.jpg" class="card-img-top" alt="Model 2">
+                <div class="card-body">
+                    <h5 class="card-title">ENTEI</h5>
+                    <p class="card-text">Desperte a fera dentro de você com o Unova Entei. Este não é apenas um carro; é
+                        uma experiência de condução que libera a fúria da velocidade e a elegância selvagem. Venha e
+                        domine as estradas com o Unova Entei.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Popover Initialization -->
+    <script>
+        $(function () {
+            $('#contact-link').popover({
+                html: true,
+                trigger: 'manual'
+            }).on("mouseenter", function () {
+                var _this = this;
+                $(this).popover("show");
+                $(".popover").on("mouseleave", function () {
+                    $(_this).popover('hide');
+                });
+            }).on("mouseleave", function () {
+                var _this = this;
+                setTimeout(function () {
+                    if (!$(".popover:hover").length) {
+                        $(_this).popover("hide");
+                    }
+                }, 300);
+            });
+        });
+    </script>
+
+    <script>
+        function openModelPage(url) {
+            window.location.href = url;
+        }
+
+        $(function () {
+            $('#contact-link').popover({
+                html: true,
+                trigger: 'manual'
+            }).on("mouseenter", function () {
+                var _this = this;
+                $(this).popover("show");
+                $(".popover").on("mouseleave", function () {
+                    $(_this).popover('hide');
+                });
+            }).on("mouseleave", function () {
+                var _this = this;
+                setTimeout(function () {
+                    if (!$(".popover:hover").length) {
+                        $(_this).popover("hide");
+                    }
+                }, 300);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

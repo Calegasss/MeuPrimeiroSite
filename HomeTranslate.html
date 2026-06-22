@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unova</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #video-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+
+        #video {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7) !important;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand img {
+            width: 60px;
+        }
+
+        .content-container {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        .content-container h1,
+        .content-container p {
+            margin: 0;
+        }
+
+        /* Rodapé estilo navbar */
+        .footer-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px 0;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+
+        /* Estilo para os links do rodapé */
+        .footer-container a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Estilo para os links do rodapé quando hover */
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="Home.html"><img src="assets/images/UnovaLogo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Models.html">Modelos</a>
+                </li>
+                <li class="nav-item">
+                    <a id="contact-link" class="nav-link" href="#" data-toggle="popover" title="Siga-nos"
+                        data-content='<a href="https://twitter.com/" target="_blank">Twitter</a><br><a href="https://www.instagram.com/unovamotors/" target="_blank">Instagram</a><br><a href="https://www.facebook.com/" target="_blank">Facebook</a>'>Contato</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="SobreNos.html">Sobre Nós</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="Home.html">Tradução</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Seção de Vídeo -->
+    <div id="video-container">
+        <video id="video" src="assets/videos/UnovaLaprass.mp4" autoplay loop muted playsinline></video>
+    </div>
+
+    <!-- Container de Conteúdo -->
+    <div class="content-container">
+        <h1>Bem-vindo à Unova</h1>
+        <p>A arte de superar expectativas.</p>
+    </div>
+
+    <!-- Container do Rodapé -->
+    <div class="footer-container">
+        <!-- Informações de contato e endereço da empresa -->
+            <p>Contato: unovaoficial@unova.com | Endereço: Rua Unova, 123, Versalhes - França</p>
+    </div>
+
+    <!-- Bootstrap JS e jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Inicialização do Popover -->
+    <script>
+        $(function () {
+            $('#contact-link').popover({
+                html: true,
+                trigger: 'manual'
+            }).on("mouseenter", function () {
+                var _this = this;
+                $(this).popover("show");
+                $(".popover").on("mouseleave", function () {
+                    $(_this).popover('hide');
+                });
+            }).on("mouseleave", function () {
+                var _this = this;
+                setTimeout(function () {
+                    if (!$(".popover:hover").length) {
+                        $(_this).popover("hide");
+                    }
+                }, 100);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
